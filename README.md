@@ -1,5 +1,5 @@
 # NASVI (Navigation Assistance for the Visually Impaired)
-NASVI is a type of i ntelligent cane for blind people and is a tool for orientation and mobility for the user. Unlike other common canes, NASVI has different electronic components including sensors, actuators, headphone connection and a camera to fulfill the task of detecting and avoiding obstacles as well as people in the user's environment.
+NASVI is a type of intelligent cane for blind people and is a tool for orientation and mobility for the user. Unlike other common canes, NASVI has different electronic components including sensors, actuators, headphone connection and a camera to fulfill the task of detecting and avoiding obstacles as well as people in the user's environment.
 
 ## Artificial_Vision-Mitnicks repository
 
