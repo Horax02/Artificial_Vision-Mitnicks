@@ -10,6 +10,7 @@ This repository contains different Colaboratory notebooks with the following con
 * SSD MobileNet (Victor Gutierrez): Implementation with examples in our context (Bolivia) of object detection using the SSD MobileNet model.
 * Dataset_BASTY: Dataset related to the project.
 * README (Horacio Cuizaga): Project description and details.
+* Yolo V5 (Marcelo Velasquez): Yolo V5 implementation attempt.
 
 ## Motivation
 
