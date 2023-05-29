@@ -9,6 +9,7 @@ This repository contains different Colaboratory notebooks with the following con
 * EfficientNet_Fallido (Victor Gutierrez): EfficientNet implementation attempt.
 * SSD MobileNet (Victor Gutierrez): Implementation with examples in our context (Bolivia) of object detection using the SSD MobileNet model.
 * Dataset_BASTY: Dataset related to the project.
+* README (Horacio Cuizaga): Project description and details.
 
 ## Motivation
 
