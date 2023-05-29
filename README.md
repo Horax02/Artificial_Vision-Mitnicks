@@ -5,8 +5,10 @@ NASVI is a type of intelligent cane for blind people and is a tool for orientati
 
 This repository contains different Colaboratory notebooks with the following contents:
 
-* Faster R-CNN: implementation with examples of object detection by means of the Faster R-CNN.
-* 
+* Faster R-CNN (Horacio Cuizaga): Implementation with examples in our context (Bolivia) of object detection using the Faster R-CNN model.
+* EfficientNet_Fallido (Victor Gutierrez): EfficientNet implementation attempt.
+* SSD MobileNet (Victor Gutierrez): Implementation with examples in our context (Bolivia) of object detection using the SSD MobileNet model.
+* Dataset_BASTY: Dataset related to the project.
 
 ## Motivation
 
@@ -20,7 +22,7 @@ The motivation behind this project lies in improving the quality of life of visu
 
 * Tiva C Series TM4C1294 Connected LaunchPad
 
-* llenar
+* Webcam Full HD 1080P
 
 ## Most important functionalities
 
