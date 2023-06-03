@@ -44,9 +44,5 @@ Finally, the real-time guidance function, which mainly takes advantage of the pr
 Members:
 * Andrea Lucia Bernal Benavides
 * Horacio Cuizaga Rodríguez
-* Samira Belén Espejo Porco
 * Victor Alvaro Gutierrez Kaisler
-* Abigail Belen Lopez Tarqui
-* Alberto Isaac Martinez Carballo
-* Alexis Pamela Patzi Chavez
 * Marcelo Alberto Velasquez Enriquez
