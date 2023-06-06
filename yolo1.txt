@@ -1,0 +1,53 @@
+!git clone https://github.com/ultralytics/yolov5  # clone
+%cd yolov5
+%pip install -qr requirements.txt  # install
+
+import torch
+import utils
+display = utils.notebook_init()  # checks
+!nvidia-smi
+# Train YOLOv5s on COCO128 for 3 epochs
+!python train.py --img 640 --batch 16 --epochs 3 --data custom.yaml --weights yolov5s.pt --cache
+# YOLOv5 PyTorch HUB Inference (DetectionModels only)
+import torch
+
+model = torch.hub.load('ultralytics/yolov5', 'yolov5s', force_reload=True)  # yolov5n - yolov5x6 or custom
+im = 'https://ultralytics.com/images/zidane.jpg'  # file, Path, PIL.Image, OpenCV, nparray, list
+results = model(im)  # inference
+results.print()  # or .show(), .save(), .crop(), .pandas(), etc.
+# Cargamos nuestro drive en el notebook de trabajo
+from google.colab import drive
+drive.mount('/content/drive')
+
+# Clonamos repositorio de YOLO
+!git clone https://github.com/AlexeyAB/darknet.git
+%cd darknet
+
+!wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
+
+# Habilitar GPU y OPENCV
+!sed -i 's/OPENCV=0/OPENCV=1/' Makefile
+!sed -i 's/GPU=0/GPU=1/' Makefile
+!sed -i 's/CUDNN=0/CUDNN=1/' Makefile
+
+# Make
+!make
+!chmod 755 darknet
+
+import os
+
+# Función para procesar y mostrar las imágenes en un directorio
+def process_images_in_directory(traffic):
+    for filename in os.listdir(traffic):
+        if filename.endswith(".jpg") or filename.endswith(".jpeg") or filename.endswith(".png"):
+            image_path = os.path.join(traffic, filename)
+            # Ejecutar detección de objetos en la imagen
+            !./darknet detect cfg/yolov4.cfg yolov4.weights "{image_path}" -thresh 0.30 -dont_show
+            # Mostrar la imagen procesada
+            imShow('predictions.jpg')
+
+# Directorio que contiene las imágenes
+image_directory = "/content/drive/MyDrive/traffict lights/traffict lights image"
+
+# Procesar y mostrar las imágenes en el directorio
+process_images_in_directory(image_directory)
